@@ -115,7 +115,7 @@ RUN echo "headless    ALL=(ALL) ALL" >> /etc/sudoers
 RUN echo "export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /root/.bashrc
 RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
 RUN echo "nameserver 8.8.4.4" >> /etc/resolv.conf
-RUN $INST_SCRIPTS/package_4.sh
+RUN $INST_SCRIPTS/package4.sh
 
 ENTRYPOINT [ "/usr/bin/tini", "--", "/dockerstartup/startup.sh" ]
 
