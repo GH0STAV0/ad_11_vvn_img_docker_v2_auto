@@ -63,3 +63,8 @@ echo "Installing  xfce "
 # #apt-get install -y dbus-x11 xauth xinit x11-xserver-utils xdg-utils--no-cache=true
 # DEBIAN_FRONTEND=noninteractive apt-get install -y --fix-missing  supervisor
 
+apt-get clean autoclean
+apt-get autoremove --yes
+apt-get autoclean 
+apt-get autoremove --yes
+rm -rf /var/lib/apt/lists/*
